@@ -116,7 +116,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_go_checkers = ['go', 'golint', 'govet']
+let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'wsl']
 let g:syntastic_aggregate_errors = 1
 
 
@@ -171,9 +171,7 @@ au BufNewFile,BufRead *.go
   \ set textwidth=120    |
   \ set expandtab        |
   \ set autoindent       |
-  \ set ttymouse=sgr     |
   \ set updatetime=500   |
-  \ set balloondelay=250 |
   \ set signcolumn=yes   |
   \ set fileformat=unix
 
@@ -184,18 +182,6 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-
-
-" MAPS 
-nnoremap <SPACE> <Nop>
-let mapleader=" "
-map s <Plug>(easymotion-bd-f)
-nmap <LEADER>s <Plug>(easymotion-overwin-f)
-nmap <LEADER>P :CtrlPBuffer<CR>
-nmap <LEADER>p :CtrlP<CR>
-nmap <LEADER>t :%s/\s\+$//g<CR>
-nmap <LEADER>; :Ack<Space>
-map <C-n> :NERDTreeToggle<CR>
 
 
 " -----------------------------------------COC CONFIGURATION--------------------------------------------
@@ -321,3 +307,17 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+
+
+" MAPS
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+map s <Plug>(easymotion-bd-f)
+nmap <LEADER>s <Plug>(easymotion-overwin-f)
+nmap <LEADER>p :CtrlPBuffer<CR>
+nmap <LEADER>P :CtrlP<CR>
+nmap <LEADER>t :%s/\s\+$//g<CR>
+nmap <LEADER>; :Ack<Space>
+map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-w>z :vertical res<CR>
