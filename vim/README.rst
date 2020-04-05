@@ -15,3 +15,15 @@ Mac OS
   ln -s ~/Warzone/Git/host/vim/init.vim ~/.config/nvim/init.vim 
 
 Thereafter, you shoud install plugins using :code:`:PlugInstall` within :code:`nvim`.
+
+Archlinux
+=========
+
+.. code-block:: bash
+  yay -Syu neovim
+  mkdir $HOME/.config/nvim
+  ln -s /home/luan/warzone/git/host/vim/init.vim ~/.config/nvim/init.vim
+  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+Thereafter, you shoud install plugins using :code:`:PlugInstall` within :code:`nvim`.
