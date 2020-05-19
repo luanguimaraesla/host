@@ -15,4 +15,59 @@
       path: /tmp/aws/install
       mode: '755'
   - name: "install aws-cli 2"
-    command: "/tmp/aws/install"
+    command: "/tmp/aws/install --update"
+
+  # install kubectl
+  - name: "install kubectl"
+    pacman:
+      name: kubectl
+      state: latest
+      update_cache: true
+
+  # install tfenv
+  - name: "clone tfenv"
+    git:
+      repo: https://github.com/topfreegames/tfenv.git
+      dest: /opt/tfenv
+  - name: "change tfenv mode"
+    file:
+      path: /opt/tfenv
+      group: luan
+      owner: luan
+      recurse: yes
+  - name: "install tfenv binary"
+    file:
+      src: /opt/tfenv/bin/tfenv
+      dest: /usr/local/bin/tfenv
+      state: link
+      force: true
+  - name: "install terraform binary"
+    file:
+      src: /opt/tfenv/bin/terraform
+      dest: /usr/local/bin/terraform
+      state: link
+      force: true
+
+  # install kopsenv
+  - name: "clone kopsenv"
+    git:
+      repo: https://github.com/topfreegames/kopsenv.git
+      dest: /opt/kopsenv
+  - name: "change kopsenv mode"
+    file:
+      path: /opt/kopsenv
+      group: luan
+      owner: luan
+      recurse: yes
+  - name: "install kopsenv binary"
+    file:
+      src: /opt/kopsenv/bin/kopsenv
+      dest: /usr/local/bin/kopsenv
+      state: link
+      force: true
+  - name: "install kopsenv binary"
+    file:
+      src: /opt/kopsenv/bin/kopsenv
+      dest: /usr/local/bin/kopsenv
+      state: link
+      force: true
