@@ -65,9 +65,9 @@
       dest: /usr/local/bin/kopsenv
       state: link
       force: true
-  - name: "install kopsenv binary"
+  - name: "install kops binary"
     file:
-      src: /opt/kopsenv/bin/kopsenv
-      dest: /usr/local/bin/kopsenv
+      src: /opt/kopsenv/bin/kops
+      dest: /usr/local/bin/kops
       state: link
       force: true
