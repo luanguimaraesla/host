@@ -1,0 +1,18 @@
+- name: "workstation configuration"
+  hosts: localhost
+  become: true
+
+  tasks:
+
+  # install and configure aws-cli 2
+  - name: "download aws-cli 2 installer"
+    unarchive: 
+      src: https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
+      dest: /tmp
+      remote_src: true
+  - name: "change aws-cli 2 mode"
+    file:
+      path: /tmp/aws/install
+      mode: '755'
+  - name: "install aws-cli 2"
+    command: "/tmp/aws/install"
