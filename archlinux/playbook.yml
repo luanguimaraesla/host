@@ -6,7 +6,7 @@
 
   # install and configure aws-cli 2
   - name: "download aws-cli 2 installer"
-    unarchive: 
+    unarchive:
       src: https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
       dest: /tmp
       remote_src: true
@@ -71,3 +71,16 @@
       dest: /usr/local/bin/kops
       state: link
       force: true
+
+  # virtualization
+  - name: "install kubectl"
+    pacman:
+      name: virtualbox
+      state: latest
+      update_cache: true
+
+  - name: "install vagrant"
+    pacman:
+      name: vagrant
+      state: latest
+      update_cache: true
