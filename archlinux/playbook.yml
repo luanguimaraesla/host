@@ -84,3 +84,10 @@
       name: vagrant
       state: latest
       update_cache: true
+
+  # helpers
+  - name: "install translate shell"
+    pacman:
+      name: translate-shell 
+      state: latest
+      update_cache: true
