@@ -49,7 +49,6 @@ set nocompatible                   " use Vim settings, rather then Vi settings (
 set backspace=indent,eol,start     " allow backspacing over everything in insert mode
 set number
 set wildignore=*.o,*~,*.pyc,*.swp
-set paste                          " paste behaviour
 set hidden                         " hidden buffers
 set completeopt=menu               " disable preview code when using omni complete
 set modelines=1                    " allow modelines
@@ -64,7 +63,6 @@ set shiftwidth=2
 set smarttab
 set autoindent
 set smartindent
-set clipboard+=unnamedplus
 
 " AYU CONFIGURATION
 set termguicolors
@@ -90,8 +88,6 @@ let g:gitgutter_max_signs = 10000
 " HIGHLIGHT CURSOR CONFIGURATION
 set cursorcolumn
 set cursorline
-hi CursorLine term=bold ctermfg=Yellow gui=bold guifg=Yellow
-hi CursorLineNr term=bold ctermfg=Yellow gui=bold guifg=Yellow
 
 
 
@@ -115,7 +111,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'wsl']
+let g:syntastic_go_checkers = ['go', 'golint', 'wsl']
 let g:syntastic_aggregate_errors = 1
 
 
