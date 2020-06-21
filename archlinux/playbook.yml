@@ -4,6 +4,13 @@
 
   tasks:
 
+  # website tools
+  - name: "install hugo"
+    pacman:
+      name: hugo
+      state: latest
+      update_cache: true
+
   # install and configure aws-cli 2
   - name: "download aws-cli 2 installer"
     unarchive:
@@ -89,5 +96,12 @@
   - name: "install translate shell"
     pacman:
       name: translate-shell 
+      state: latest
+      update_cache: true
+
+  # terminal
+  - name: "install fzf"
+    pacman:
+      name: fzf 
       state: latest
       update_cache: true
