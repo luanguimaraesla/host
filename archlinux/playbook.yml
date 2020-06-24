@@ -79,8 +79,15 @@
       state: link
       force: true
 
+  # install helm
+  - name: "install helm"
+    pacman:
+      name: helm
+      state: latest
+      update_cache: true
+
   # virtualization
-  - name: "install kubectl"
+  - name: "install virtualbox"
     pacman:
       name: virtualbox
       state: latest
