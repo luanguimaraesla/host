@@ -24,6 +24,13 @@
   - name: "install aws-cli 2"
     command: "/tmp/aws/install --update"
 
+  # install packer
+  - name: "install packer"
+    pacman:
+      name: packer
+      state: latest
+      update_cache: true
+
   # install kubectl
   - name: "install kubectl"
     pacman:
