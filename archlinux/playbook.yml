@@ -4,6 +4,13 @@
 
   tasks:
 
+  # install rss reader 
+  - name: "install feedreader"
+    pacman:
+      name: feedreader 
+      state: latest
+      update_cache: true
+
   # website tools
   - name: "install hugo"
     pacman:
