@@ -100,6 +100,13 @@
       state: latest
       update_cache: true
 
+  # install vault
+  - name: "install vault"
+    pacman:
+      name: vault 
+      state: latest
+      update_cache: true
+
   # virtualization
   - name: "install virtualbox"
     pacman:
