@@ -4,10 +4,10 @@
 
   tasks:
 
-  # install rss reader 
+  # install rss reader
   - name: "install feedreader"
     pacman:
-      name: feedreader 
+      name: feedreader
       state: latest
       update_cache: true
 
@@ -103,7 +103,7 @@
   # install vault
   - name: "install vault"
     pacman:
-      name: vault 
+      name: vault
       state: latest
       update_cache: true
 
@@ -123,13 +123,20 @@
   # helpers
   - name: "install translate shell"
     pacman:
-      name: translate-shell 
+      name: translate-shell
       state: latest
       update_cache: true
 
   # terminal
   - name: "install fzf"
     pacman:
-      name: fzf 
+      name: fzf
+      state: latest
+      update_cache: true
+
+  # music
+  - name: "install ardour"
+    pacman:
+      name: ardour
       state: latest
       update_cache: true
