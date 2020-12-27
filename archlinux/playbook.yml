@@ -4,6 +4,13 @@
 
   tasks:
 
+  # install browsers 
+  - name: "install firefox developer edition"
+    pacman:
+      name: firefox-developer-edition
+      state: latest
+      update_cache: true
+
   # install rss reader
   - name: "install feedreader"
     pacman:
@@ -140,3 +147,36 @@
       name: ardour
       state: latest
       update_cache: true
+
+  # bluetooth
+  - name: "install bluez"
+    pacman:
+      name: bluez 
+      state: latest
+      update_cache: true
+
+  - name: "install bluez-utils"
+    pacman:
+      name: bluez-utils 
+      state: latest
+      update_cache: true
+
+  - name: "install blueman"
+    pacman:
+      name: blueman
+      state: latest
+      update_cache: true
+
+  - name: "install pulseaudio-alsa"
+    pacman:
+      name: pulseaudio-alsa
+      state: latest
+      update_cache: true
+
+  - name: "install pulseaudio-bluetooth"
+    pacman:
+      name: pulseaudio-bluetooth
+      state: latest
+      update_cache: true
+
+
