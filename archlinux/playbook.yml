@@ -1,6 +1,8 @@
 - name: "workstation configuration"
   hosts: localhost
   become: true
+  roles:
+  - kewlfft.aur
 
   tasks:
 
@@ -24,6 +26,15 @@
       name: hugo
       state: latest
       update_cache: true
+
+  # auth tools
+  - name: "install authy"
+    become: false
+    aur:
+      use: yay
+      name:
+      - authy
+      state: latest
 
   # install and configure aws-cli 2
   - name: "download aws-cli 2 installer"
