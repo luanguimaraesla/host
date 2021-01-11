@@ -13,6 +13,7 @@ Mac OS
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   ln -s ~/Warzone/Git/host/vim/init.vim ~/.config/nvim/init.vim 
+  ln -s ~/Warzone/Git/host/vim/coc-settings.json ~/.config/nvim/coc-settings.json
 
 Thereafter, you shoud install plugins using :code:`:PlugInstall` within :code:`nvim`.
 
@@ -23,6 +24,7 @@ Archlinux
   yay -Syu neovim
   mkdir $HOME/.config/nvim
   ln -s /home/luan/warzone/git/host/vim/init.vim ~/.config/nvim/init.vim
+  ln -s ~/warzone/git/host/vim/coc-settings.json ~/.config/nvim/coc-settings.json
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
